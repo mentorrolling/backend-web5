@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import router from "../routes/usuarios.js";
 
 class Server {
@@ -16,6 +17,7 @@ class Server {
     //carpeta public
     this.app.use(express.static("public"));
     //CORS
+    this.app.use(cors());
   }
 
   routes() {
